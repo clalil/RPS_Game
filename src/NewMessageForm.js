@@ -11,6 +11,9 @@ class NewMessageForm extends Component {
     }
 
     handleSend = () => {
+        const { inputText } = this.state
+        const { onSend } = this.props
+        onSend(inputText)
         this.setState({ inputText: ''})
     }
 
