@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
+import NewMessageForm from './NewMessageForm'
 
 class App extends Component {
   render() {
     return(
-      <div></div>
+      <div>
+        <NewMessageForm />
+      </div>
     )
   }
 }
