@@ -5,6 +5,8 @@ class Player extends Component {
         return (
             <div className="user_choice">
                 <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="Scissors">Scissors</button>
             </div>
         )
     }

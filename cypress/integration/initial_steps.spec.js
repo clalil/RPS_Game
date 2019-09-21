@@ -8,7 +8,6 @@ describe('The home page', function () {
         .should('contain', "Rock, Paper, Scissors")
 
         cy.get('.user_choice')
-        .get('#rock')
-
+        .should('contain', "Rock, Paper, Scissors")
     })
 })
