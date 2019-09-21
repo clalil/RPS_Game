@@ -16,7 +16,9 @@ describe('The home page', function () {
     describe('Playing the game', function () {
 
         it('succeessfully plays the game', function() {
-            cy.get('.user_choice').click('#rock')
+            cy.get('.user_choice')
+            .find('#rock').as('rockBtn')
+            cy.get('@rockBtn').click()
             cy.contains('You chose "Rock"')
         })
 
