@@ -12,7 +12,7 @@
 ```
 As a User  
 When I visit the page  
-I want to see my current game choices   
+I want to see my game choices   
 
 As a User  
 In order to play the game    
