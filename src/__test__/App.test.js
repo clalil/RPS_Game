@@ -11,7 +11,8 @@ describe('<App />', () => {
     })
 
     it('displays Computer\'s choice', () => {
-        describedComponet.find('#startGame').simulate("click")
-        expect(describedComponent.contains('Computer chose')).toEqual(true);
+        const describedComponent = mount(<App />)
+        describedComponent.find('#startGame').simulate("click")
+        expect(describedComponent.contains('Computer chose')).toBeTruthy;
     })
 })

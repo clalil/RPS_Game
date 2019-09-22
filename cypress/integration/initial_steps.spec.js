@@ -23,7 +23,7 @@ describe('The home page', function () {
 
         it('renders a choice for the computer', function() {
             cy.get('.runGame')
-            .find('#startgame').as('gameBtn')
+            .find('#startGame').as('gameBtn')
             cy.get('@gameBtn').click()
             cy.contains('Computer chose')
         })

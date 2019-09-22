@@ -32,8 +32,7 @@ class App extends Component {
 
   updateComputerChoice = (type) => {
     let compChoice = this.state.computerChoice
-    compChoice = Math.floor(Math.random() * type.length);
-    debugger;
+    compChoice = Math.floor(Math.random() * type.length + 1);
     this.setState({computerChoice: compChoice})
   }
 
@@ -48,12 +47,22 @@ class App extends Component {
       playerChoiceDisplay = 'You chose Scissors'
     }
 
+    let computerChoiceDisplay
+    if(this.state.computerChoice === 1) {
+      computerChoiceDisplay = 'Computer chose Rock'
+    } else if(this.state.computerChoice === 2) {
+      computerChoiceDisplay = 'Computer chose Paper'
+    } else if(this.state.computerChoice === 3){
+      computerChoiceDisplay = 'Computer chose Scissors'
+    }
+
     return(
       <div>
         <h1>Rock, Paper, Scissors</h1>
         <Player onClick={this.updatePlayerChoice} />
         {playerChoiceDisplay}
         <Computer onClick={this.updateComputerChoice} />
+        {computerChoiceDisplay}
       </div>
     )
   }
