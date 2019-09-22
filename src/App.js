@@ -14,6 +14,12 @@ class App extends Component {
     this.updateComputerChoice = this.updateComputerChoice.bind(this)
   }
 
+  resetGame = () => {
+    this.setState({playerChoice: null})
+    this.setState({computerChoice: null})
+    this.setState({gameResult: null})
+  }
+
   updatePlayerChoice = (type) => {
     let playchoice = this.state.playerChoice
     if(type === 'rock') {
@@ -84,6 +90,7 @@ class App extends Component {
         <Computer 
         onClick={this.updateComputerChoice} />
         {computerChoiceDisplay}
+        <button onClick={this.resetGame}>Reset Game</button>
         <div>
         {whoWon}
         </div>
