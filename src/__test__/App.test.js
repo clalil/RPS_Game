@@ -7,7 +7,7 @@ describe('<App />', () => {
     it('displays Player\'s choice', () => {
         const describedComponent = mount(<App />)
         describedComponent.find("#rock").simulate("click")
-        expect(describedComponent.contains('You chose "Rock"')).toEqual(true);
+        expect(describedComponent.contains('You chose Rock')).toEqual(true);
     })
 
     it('displays Computer\'s choice', () => {

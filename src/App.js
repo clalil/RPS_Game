@@ -31,11 +31,11 @@ class App extends Component {
 
     let playerChoiceDisplay
     if(this.state.playerChoice == 1) {
-      playerChoiceDisplay = 'You chose "Rock"'
+      playerChoiceDisplay = 'You chose Rock'
     } else if(this.state.playerChoice == 2) {
       playerChoiceDisplay = 'You chose Paper'
     } else if(this.state.playerChoice == 3){
-      playerChoiceDisplay = ' You chose Scissors'
+      playerChoiceDisplay = 'You chose Scissors'
     }
 
     return(

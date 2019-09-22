@@ -18,7 +18,7 @@ describe('The home page', function () {
             cy.get('.user_choice')
             .find('#rock').as('rockBtn')
             cy.get('@rockBtn').click()
-            cy.contains('You chose "Rock"')
+            cy.contains('You chose Rock')
         })
 
         it('renders a choice for the computer', function() {
