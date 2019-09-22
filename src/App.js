@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Player from "./Player"
+import Computer from "./Computer"
 
 class App extends Component {
   constructor(props) {
@@ -8,6 +9,10 @@ class App extends Component {
       playerChoice: null
     }
     this.updatePlayerChoice = this.updatePlayerChoice.bind(this)
+  }
+
+  updateComputerChoice(i) {
+    return <Computer computerChoice={i} />
   }
 
   updatePlayerChoice = (type) => {
@@ -38,11 +43,14 @@ class App extends Component {
       playerChoiceDisplay = 'You chose Scissors'
     }
 
+    let computerChoiceDisplay = this.updateComputerChoice
+
     return(
       <div>
         <h1>Rock, Paper, Scissors</h1>
         <Player onClick={this.updatePlayerChoice} />
         {playerChoiceDisplay}
+        {computerChoiceDisplay}
       </div>
     )
   }
