@@ -16,7 +16,7 @@ describe('<App />', () => {
         describedComponent.find('#startGame').simulate("click")
         expect(describedComponent.contains('Computer chose')).toBeTruthy;
     })
-    
+
     it('does not display winner/computer choice before a weapon has been selected', () => {
         const describedComponent = mount(<App />)
         describedComponent.find('#startGame').simulate('click')

@@ -48,7 +48,7 @@ class App extends Component {
     let compSelection = compChoice
     let gameFinal = this.state.gameResult
     if(playerSelection === null) {
-      gameFinal = 'You need to choose a weapon'
+      this.resetGame()
     } else if(playerSelection === compSelection) {
       gameFinal = 'It\'s a draw!'
     } else if((playerSelection === 1 && compSelection === 2) || (playerSelection === 2 && compSelection === 3) || (playerSelection === 3 && compSelection === 1)) {
