@@ -13,14 +13,14 @@ describe('<App />', () => {
 
     it('displays Computer\'s choice', () => {
         const describedComponent = mount(<App />)
-        describedComponent.find('#startGame').simulate("click")
+        describedComponent.find('#rock').simulate("click")
         expect(describedComponent.contains('Computer chose')).toBeTruthy;
     })
 
-    it('does not display winner/computer choice before a weapon has been selected', () => {
-        const describedComponent = mount(<App />)
-        describedComponent.find('#startGame').simulate('click')
-        expect(describedComponent.contains('You need to choose a weapon')).toEqual(true)
-    })
+    // it('should not do anything before a weapon has been selected', () => {
+    //     const describedComponent = mount(<App />)
+    //     describedComponent.find('#startGame').simulate('click')
+    //     expect(describedComponent.find('.container').text()).toContain('0');
+    // })
 
 })

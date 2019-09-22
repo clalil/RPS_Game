@@ -82,7 +82,7 @@ class App extends Component {
     let whoWon = this.state.gameResult
 
     return(
-      <div>
+      <div className=".container">
         <h1>Rock, Paper, Scissors</h1>
         <Player onClick={this.updatePlayerChoice} />
         {playerChoiceDisplay}
