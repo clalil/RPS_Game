@@ -9,4 +9,9 @@ describe('<App />', () => {
         describedComponent.find("#rock").simulate("click")
         expect(describedComponent.contains('You chose "Rock"')).toEqual(true);
     })
+
+    it('displays Computer\'s choice', () => {
+        describedComponet.find('#startGame').simulate("click")
+        expect(describedComponent.contains('Computer chose')).toEqual(true);
+    })
 })
