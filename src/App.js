@@ -7,10 +7,10 @@ class App extends Component {
     this.state = {
       playerChoice: null
     }
-    this.updateChoice = this.updateChoice.bind(this)
+    this.updatePlayerChoice = this.updatePlayerChoice.bind(this)
   }
 
-  updateChoice = (type) => {
+  updatePlayerChoice = (type) => {
     let choice = this.state.playerChoice
     if(type === 'rock') {
       choice = 1
@@ -41,7 +41,7 @@ class App extends Component {
     return(
       <div>
         <h1>Rock, Paper, Scissors</h1>
-        <Player onClick={this.updateChoice} />
+        <Player onClick={this.updatePlayerChoice} />
         {playerChoiceDisplay}
       </div>
     )
