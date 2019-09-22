@@ -15,4 +15,5 @@ describe('<App />', () => {
         describedComponent.find('#startGame').simulate("click")
         expect(describedComponent.contains('Computer chose')).toBeTruthy;
     })
+
 })
