@@ -6,13 +6,11 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      playerChoice: null
+      playerChoice: null,
+      computerChoice: null
     }
     this.updatePlayerChoice = this.updatePlayerChoice.bind(this)
-  }
-
-  updateComputerChoice(i) {
-    return <Computer computerChoice={i} />
+    this.updateComputerChoice = this.updateComputerChoice.bind(this)
   }
 
   updatePlayerChoice = (type) => {
@@ -32,25 +30,30 @@ class App extends Component {
     this.setState({playerChoice: choice})
   }
 
+  updateComputerChoice = (type) => {
+    let compChoice = this.state.computerChoice
+    compChoice = Math.floor(Math.random() * type.length);
+    debugger;
+    this.setState({computerChoice: compChoice})
+  }
+
   render() {
 
     let playerChoiceDisplay
-    if(this.state.playerChoice == 1) {
+    if(this.state.playerChoice === 1) {
       playerChoiceDisplay = 'You chose Rock'
-    } else if(this.state.playerChoice == 2) {
+    } else if(this.state.playerChoice === 2) {
       playerChoiceDisplay = 'You chose Paper'
-    } else if(this.state.playerChoice == 3){
+    } else if(this.state.playerChoice === 3){
       playerChoiceDisplay = 'You chose Scissors'
     }
-
-    let computerChoiceDisplay = this.updateComputerChoice
 
     return(
       <div>
         <h1>Rock, Paper, Scissors</h1>
         <Player onClick={this.updatePlayerChoice} />
         {playerChoiceDisplay}
-        {computerChoiceDisplay}
+        <Computer onClick={this.updateComputerChoice} />
       </div>
     )
   }
