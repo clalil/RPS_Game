@@ -1,16 +1,19 @@
 import React, {Component} from 'react'
 import Player from "./Player"
+import Computer from "./Computer"
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      playerChoice: null
+      playerChoice: null,
+      computerChoice: null
     }
-    this.updateChoice = this.updateChoice.bind(this)
+    this.updatePlayerChoice = this.updatePlayerChoice.bind(this)
+    this.updateComputerChoice = this.updateComputerChoice.bind(this)
   }
 
-  updateChoice = (type) => {
+  updatePlayerChoice = (type) => {
     let choice = this.state.playerChoice
     if(type === 'rock') {
       choice = 1
@@ -27,22 +30,39 @@ class App extends Component {
     this.setState({playerChoice: choice})
   }
 
+  updateComputerChoice = (type) => {
+    let compChoice = this.state.computerChoice
+    compChoice = Math.floor(Math.random() * type.length + 1);
+    this.setState({computerChoice: compChoice})
+  }
+
   render() {
 
     let playerChoiceDisplay
-    if(this.state.playerChoice == 1) {
-      playerChoiceDisplay = 'You chose "Rock"'
-    } else if(this.state.playerChoice == 2) {
+    if(this.state.playerChoice === 1) {
+      playerChoiceDisplay = 'You chose Rock'
+    } else if(this.state.playerChoice === 2) {
       playerChoiceDisplay = 'You chose Paper'
-    } else if(this.state.playerChoice == 3){
-      playerChoiceDisplay = ' You chose Scissors'
+    } else if(this.state.playerChoice === 3){
+      playerChoiceDisplay = 'You chose Scissors'
+    }
+
+    let computerChoiceDisplay
+    if(this.state.computerChoice === 1) {
+      computerChoiceDisplay = 'Computer chose Rock'
+    } else if(this.state.computerChoice === 2) {
+      computerChoiceDisplay = 'Computer chose Paper'
+    } else if(this.state.computerChoice === 3){
+      computerChoiceDisplay = 'Computer chose Scissors'
     }
 
     return(
       <div>
         <h1>Rock, Paper, Scissors</h1>
-        <Player onClick={this.updateChoice} />
+        <Player onClick={this.updatePlayerChoice} />
         {playerChoiceDisplay}
+        <Computer onClick={this.updateComputerChoice} />
+        {computerChoiceDisplay}
       </div>
     )
   }
