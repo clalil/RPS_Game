@@ -1,1 +1,0 @@
-// Write a test to see if component state has changed

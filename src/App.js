@@ -23,7 +23,7 @@ class App extends Component {
     } else {
       choice = 'No choice was made'
     }
-    debugger;
+    
     this.setState({playerChoice: choice})
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
       playerChoiceDisplay = 'You chose "Rock"'
     } else if(this.state.playerChoice == 2) {
       playerChoiceDisplay = 'You chose Paper'
-    } else {
+    } else if(this.state.playerChoice == 3){
       playerChoiceDisplay = ' You chose Scissors'
     }
 
