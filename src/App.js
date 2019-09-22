@@ -40,22 +40,21 @@ class App extends Component {
     let compChoice = this.state.computerChoice
     compChoice = Math.floor(Math.random() * type.length + 1);
     this.setState({computerChoice: compChoice})
-    this.gameEndResult()
+    this.gameEndResult(compChoice)
   }
 
-  gameEndResult = () => {
+  gameEndResult = (compChoice) => {
     let playerSelection = this.state.playerChoice
-    let compSelection = this.state.computerChoice
+    let compSelection = compChoice
     let gameFinal = this.state.gameResult
-
     if(playerSelection === null) {
       gameFinal = 'You need to choose a weapon'
     } else if(playerSelection === compSelection) {
       gameFinal = 'It\'s a draw!'
     } else if((playerSelection === 1 && compSelection === 2) || (playerSelection === 2 && compSelection === 3) || (playerSelection === 3 && compSelection === 1)) {
-      gameFinal = 'You won!'
-    } else {
       gameFinal = 'Computer won!'
+    } else {
+      gameFinal = 'You won!'
     }
    this.setState({gameResult: gameFinal})
   }
