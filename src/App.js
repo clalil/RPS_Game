@@ -1,20 +1,48 @@
 import React, {Component} from 'react'
-import NewMessageForm from './NewMessageForm'
-import MessageList from "./MessageList"
+import Player from "./Player"
 
 class App extends Component {
-  state = { messages: [] }
-  handleSend = (newMessage) => {
-    this.setState(state => ({
-      messages: [newMessage, ...state.messages]
-    }))
+  constructor(props) {
+    super(props)
+    this.state = {
+      playerChoice: null
+    }
+    this.updateChoice = this.updateChoice.bind(this)
   }
+
+  updateChoice = (type) => {
+    let choice = this.state.playerChoice
+    if(type === 'rock') {
+      choice = 1
+    } 
+    else if(type === 'paper') {
+      choice = 2
+    } 
+    else if(type === 'scissors') {
+      choice = 3
+    } else {
+      choice = 'No choice was made'
+    }
+    
+    this.setState({playerChoice: choice})
+  }
+
   render() {
-    const { messages } = this.state
+
+    let playerChoiceDisplay
+    if(this.state.playerChoice == 1) {
+      playerChoiceDisplay = 'You chose "Rock"'
+    } else if(this.state.playerChoice == 2) {
+      playerChoiceDisplay = 'You chose Paper'
+    } else if(this.state.playerChoice == 3){
+      playerChoiceDisplay = ' You chose Scissors'
+    }
+
     return(
       <div>
-        <NewMessageForm onSend={this.handleSend} />
-        <MessageList data={messages} />
+        <h1>Rock, Paper, Scissors</h1>
+        <Player onClick={this.updateChoice} />
+        {playerChoiceDisplay}
       </div>
     )
   }
