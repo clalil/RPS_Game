@@ -1,6 +1,6 @@
 
 describe('The home page', () => {
-    it('successfully loads the page content', function() {
+    it('successfully loads the page content', () => {
         cy.visit('/')
         cy.get('h1')
         .should('contain', "Rock, Paper, Scissors")

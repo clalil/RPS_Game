@@ -3,7 +3,7 @@ import { mount, shallow } from 'enzyme'
 import App from '../App'
 import { exportAllDeclaration } from '@babel/types'
 
-describe('<App />', () => {
+describe('<Game />', () => {
 
     it('displays Player\'s choice', () => {
         const describedComponent = mount(<App />)
