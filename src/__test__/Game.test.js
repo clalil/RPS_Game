@@ -1,7 +1,6 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import App from '../App'
-import { exportAllDeclaration } from '@babel/types'
 
 describe('<Game />', () => {
 
@@ -15,6 +14,12 @@ describe('<Game />', () => {
         const describedComponent = mount(<App />)
         describedComponent.find('#rock').simulate("click")
         expect(describedComponent.contains('Computer chose')).toBeTruthy;
+    })
+
+    it('displays the Winner of the game', () => {
+        const describedComponent = mount(<App />)
+        describedComponent.find('#rock').simulate("click")
+        expect(describedComponent.contains('won')).toBeTruthy;
     })
 
     it('should not do anything before a weapon has been selected', () => {

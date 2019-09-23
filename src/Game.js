@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Player from "./Player"
-import Computer from "./Computer"
+import Computer from './Computer'
 
 class Game extends Component {
     constructor(props) {
@@ -61,7 +61,7 @@ class Game extends Component {
   
     render() {
   
-      let playerChoiceDisplay
+      let playerChoiceDisplay = this.state.playerChoice
       if(this.state.playerChoice === 1) {
         playerChoiceDisplay = 'You chose Rock'
       } else if(this.state.playerChoice === 2) {
@@ -97,5 +97,5 @@ class Game extends Component {
       )
     }
   }
-  
-  export default Game;
+
+export default Game;
