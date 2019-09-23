@@ -1,6 +1,5 @@
-import React from "react"
 
-describe('The home page', function () {
+describe('The home page', () => {
     it('successfully loads the page content', function() {
         cy.visit('/')
         cy.get('h1')
@@ -12,20 +11,27 @@ describe('The home page', function () {
         .should('contain', "Scissors")
     })
 
-    describe('Playing the game', function () {
+    describe('Playing the game', () => {
 
-        it('chooses rock, paper or scissors', function() {
+        it('chooses rock, paper or scissors', () => {
             cy.get('.user_choice')
             .find('#rock').as('rockBtn')
             cy.get('@rockBtn').click()
             cy.contains('You chose Rock')
         })
 
-        it('renders a choice for the computer', function() {
+        it('renders a choice for the computer', () => {
             cy.get('.runGame')
             .find('#startGame').as('gameBtn')
             cy.get('@gameBtn').click()
             cy.contains('Computer chose')
+        })
+
+        it('declares a winner', () => {
+            cy.get('.runGame')
+            .find('#startGame').as('gameBtn')
+            cy.get('@gameBtn').click()
+            cy.contains('won')
         })
 
     })

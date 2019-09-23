@@ -7,33 +7,56 @@ class App extends Component {
     super(props)
     this.state = {
       playerChoice: null,
-      computerChoice: null
+      computerChoice: null,
+      gameResult: null
     }
     this.updatePlayerChoice = this.updatePlayerChoice.bind(this)
     this.updateComputerChoice = this.updateComputerChoice.bind(this)
   }
 
+  resetGame = () => {
+    this.setState({playerChoice: null})
+    this.setState({computerChoice: null})
+    this.setState({gameResult: null})
+  }
+
   updatePlayerChoice = (type) => {
-    let choice = this.state.playerChoice
+    let playchoice = this.state.playerChoice
     if(type === 'rock') {
-      choice = 1
+      playchoice = 1
     } 
     else if(type === 'paper') {
-      choice = 2
+      playchoice = 2
     } 
     else if(type === 'scissors') {
-      choice = 3
+      playchoice = 3
     } else {
-      choice = 'No choice was made'
+      playchoice = 'No choice was made'
     }
-    
-    this.setState({playerChoice: choice})
+    this.setState({playerChoice: playchoice})
   }
 
   updateComputerChoice = (type) => {
     let compChoice = this.state.computerChoice
     compChoice = Math.floor(Math.random() * type.length + 1);
     this.setState({computerChoice: compChoice})
+    this.gameEndResult(compChoice)
+  }
+
+  gameEndResult = (compChoice) => {
+    let playerSelection = this.state.playerChoice
+    let compSelection = compChoice
+    let gameFinal = this.state.gameResult
+    if(playerSelection === null) {
+      this.resetGame()
+    } else if(playerSelection === compSelection) {
+      gameFinal = 'It\'s a draw!'
+    } else if((playerSelection === 1 && compSelection === 2) || (playerSelection === 2 && compSelection === 3) || (playerSelection === 3 && compSelection === 1)) {
+      gameFinal = 'Computer won!'
+    } else {
+      gameFinal = 'You won!'
+    }
+   this.setState({gameResult: gameFinal})
   }
 
   render() {
@@ -56,13 +79,20 @@ class App extends Component {
       computerChoiceDisplay = 'Computer chose Scissors'
     }
 
+    let whoWon = this.state.gameResult
+
     return(
-      <div>
+      <div className=".container">
         <h1>Rock, Paper, Scissors</h1>
         <Player onClick={this.updatePlayerChoice} />
         {playerChoiceDisplay}
-        <Computer onClick={this.updateComputerChoice} />
+        <Computer 
+        onClick={this.updateComputerChoice} />
         {computerChoiceDisplay}
+        <button onClick={this.resetGame}>Reset Game</button>
+        <div>
+        {whoWon}
+        </div>
       </div>
     )
   }
