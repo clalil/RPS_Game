@@ -17,10 +17,10 @@ describe('<App />', () => {
         expect(describedComponent.contains('Computer chose')).toBeTruthy;
     })
 
-    // it('should not do anything before a weapon has been selected', () => {
-    //     const describedComponent = mount(<App />)
-    //     describedComponent.find('#startGame').simulate('click')
-    //     expect(describedComponent.find('.container').text()).toContain('0');
-    // })
+    it('should not do anything before a weapon has been selected', () => {
+        const describedComponent = mount(<App />)
+        describedComponent.find('#startGame').simulate('click')
+        expect(describedComponent.find('.container').isEmpty()).toEqual(true);
+    })
 
 })
