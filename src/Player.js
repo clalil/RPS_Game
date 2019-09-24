@@ -4,13 +4,13 @@ class Player extends Component {
   render() {
     return (
       <div className="user_choice">
-        <button id="rock" onClick={e => this.props.onClick("rock")}>
+        <button className="fa-rock" onClick={e => this.props.onClick("rock")}>
           Rock
         </button>
-        <button id="paper" onClick={e => this.props.onClick("paper")}>
+        <button className="fa-paper" onClick={e => this.props.onClick("paper")}>
           Paper
         </button>
-        <button id="scissors" onClick={e => this.props.onClick("scissors")}>
+        <button className="scissors" onClick={e => this.props.onClick("scissors")}>
           Scissors
         </button>
       </div>

@@ -29,7 +29,7 @@ class Game extends Component {
       } else if ((playerChoice === 'rock' && randomComputerResult === 'scissors') || (playerChoice === 'paper' && randomComputerResult === 'rock') || (playerChoice === 'scissors' && randomComputerResult === 'paper')) {
         gameFinal = `Player chose ${playerChoice} and Computer chose ${randomComputerResult} - You won!`
       }
-     this.setState({gameResult: gameFinal})
+     this.setState({gameResult: gameFinal});
     }
   
     render() {
@@ -42,7 +42,7 @@ class Game extends Component {
           <Player 
           onClick={this.updatePlayerChoice}
            />
-          <button onClick={this.resetGame}>Reset Game</button>
+          <button onClick={this.resetGame}>Try again</button>
           <div>
           {whoWon}
           </div>
