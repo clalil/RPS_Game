@@ -48,7 +48,7 @@ class Game extends Component {
       let compSelection = compChoice
       let gameFinal = this.state.gameResult
       if(playerSelection === null) {
-        this.resetGame()
+        // this.resetGame()
       } else if(playerSelection === compSelection) {
         gameFinal = 'It\'s a draw!'
       } else if((playerSelection === 1 && compSelection === 2) || (playerSelection === 2 && compSelection === 3) || (playerSelection === 3 && compSelection === 1)) {
@@ -88,7 +88,9 @@ class Game extends Component {
           {playerChoiceDisplay}
           <Computer 
           onClick={this.updateComputerChoice} />
+          <div className="chompChoice">
           {computerChoiceDisplay}
+          </div>
           <button onClick={this.resetGame}>Reset Game</button>
           <div>
           {whoWon}

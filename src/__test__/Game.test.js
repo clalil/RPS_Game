@@ -22,10 +22,4 @@ describe('<Game />', () => {
         expect(describedComponent.contains('won')).toBeTruthy;
     })
 
-    it('should not do anything before a weapon has been selected', () => {
-        const describedComponent = mount(<App />)
-        describedComponent.find('#startGame').simulate('click')
-        expect(describedComponent.find('.container').exists()).toEqual(false);
-    })
-
 })
