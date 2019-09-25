@@ -7,6 +7,8 @@ const baseState = {
   playerScore: 0
 }
 
+const weaponsArray = ['rock', 'paper', 'scissors']
+
 class Game extends Component {
     constructor(props) {
       super(props)
@@ -23,7 +25,6 @@ class Game extends Component {
     }
 
       updatePlayerChoice = (playerChoice) => {
-      const weaponsArray = ['rock', 'paper', 'scissors']
       const randomIndex = Math.floor(Math.random() * weaponsArray.length)
       const randomComputerResult = weaponsArray[randomIndex]
       let gameFinal = this.state.gameResult
@@ -55,7 +56,7 @@ class Game extends Component {
           <Player 
           onClick={this.updatePlayerChoice}
            />
-          <button onClick={this.resetGame}>Try again</button>
+          <button onClick={this.resetGame}>Reset scoreboard</button>
           <div>
           {whoWon}
           {playerScoreBoard}
