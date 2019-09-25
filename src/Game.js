@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Player from "./Player"
+import GameInformation from './GameInformation'
+
 
 const baseState = {
   gameResult: null,
@@ -45,23 +47,21 @@ class Game extends Component {
      }
   
     render() {
-  
+
       let whoWon = this.state.gameResult
-      let playerScoreBoard = this.state.playerScore
-      let opponentScoreBoard = this.state.opponentScore
+      let playerCurrentScore = this.state.playerScore
+      let opponentCurrentScore = this.state.opponentScore
   
       return(
         <div className=".container">
-          <h1>Rock, Paper, Scissors</h1>
+          <GameInformation />
           <Player 
           onClick={this.updatePlayerChoice}
            />
           <button onClick={this.resetGame}>Reset scoreboard</button>
-          <div>
           {whoWon}
-          {playerScoreBoard}
-          {opponentScoreBoard}
-          </div>
+          {playerCurrentScore}
+          {opponentCurrentScore}
         </div>
       )
     }
