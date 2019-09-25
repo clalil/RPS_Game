@@ -13,11 +13,16 @@ class Game extends Component {
       this.state = baseState
     }
   
-    resetGame = () => {
-      this.setState({gameResult: null})
+    resetGame = (ms) => {
+      setTimeout( 
+        () => this.setState({
+          gameResult: null
+        }),
+        ms
+      );
     }
-  
-    updatePlayerChoice = (playerChoice) => {
+
+      updatePlayerChoice = (playerChoice) => {
       const weaponsArray = ['rock', 'paper', 'scissors']
       const randomIndex = Math.floor(Math.random() * weaponsArray.length)
       const randomComputerResult = weaponsArray[randomIndex]
@@ -35,7 +40,8 @@ class Game extends Component {
         this.setState({playerScore: playerScore + 1})
       }
      this.setState({gameResult: gameFinal});
-    }
+     this.resetGame(5000)
+     }
   
     render() {
   
