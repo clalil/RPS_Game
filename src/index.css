@@ -1,0 +1,10 @@
+body {
+    background: blue;
+}
+
+.golem-head,
+.scroll,
+.scissors {
+    max-width: 100%;
+    height: 5em
+}

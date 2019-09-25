@@ -1,22 +1,15 @@
 import React, { Component } from "react";
+import golem from './img/golem-head.png'
+import scroll from './img/scroll.png'
+import scissors from './img/scissors.png'
 
 const Player = (props) => {
     return (
       <div className="user_choice">
-        <button id="rock" onClick={e => props.onClick("rock")}>
-        <i className="icon hand rock"></i>
-          Rock
-        </button>
-        <button id="paper" onClick={e => props.onClick("paper")}>
-        <i className="icon hand paper"></i>
-          Paper
-        </button>
-        <button id="scissors" onClick={e => props.onClick("scissors")}>
-        <i className="icon hand scissors"></i>
-          Scissors
-        </button>
+        <img id="rock" className="golem-head" onClick={e => props.onClick("rock")} src={golem} alt="Rock"/>
+        <img id="paper" className="scroll" onClick={e => props.onClick("paper")} src={scroll} alt="Paper"/>
+        <img id="scissors" className="scissors" onClick={e => props.onClick("scissors")} src={scissors} alt="Scissors"/>
       </div>
     );
 }
-
 export default Player;
