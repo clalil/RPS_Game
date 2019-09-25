@@ -1,24 +1,22 @@
 import React, { Component } from "react";
 
-class Player extends Component {
-  render() {
+const Player = (props) => {
     return (
       <div className="user_choice">
-        <button id="rock" onClick={e => this.props.onClick("rock")}>
+        <button id="rock" onClick={e => props.onClick("rock")}>
         <i className="icon hand rock"></i>
           Rock
         </button>
-        <button id="paper" onClick={e => this.props.onClick("paper")}>
+        <button id="paper" onClick={e => props.onClick("paper")}>
         <i className="icon hand paper"></i>
           Paper
         </button>
-        <button id="scissors" onClick={e => this.props.onClick("scissors")}>
+        <button id="scissors" onClick={e => props.onClick("scissors")}>
         <i className="icon hand scissors"></i>
           Scissors
         </button>
       </div>
     );
-  }
 }
 
 export default Player;
