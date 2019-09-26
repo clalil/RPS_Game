@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class GameResultDisplayed extends Component {
-    render() {
+const GameResultDisplayed = (props) => {
         return (
             <div>
-                <p>{this.props.whoDidWin}</p>
-                <p>{this.props.playerCurrentScore}</p>
-                <p>{this.props.opponentCurrentScore}</p>
+                <p>{props.whoDidWin}</p>
+                <p>{props.playerCurrentScore}</p>
+                <p>{props.opponentCurrentScore}</p>
             </div>
         )
-    }
 }
+
+export default GameResultDisplayed

@@ -10,8 +10,6 @@ const baseState = {
 }
 
 const weaponsArray = ['rock', 'paper', 'scissors']
-const randomIndex = Math.floor(Math.random() * weaponsArray.length)
-const randomComputerResult = weaponsArray[randomIndex]
 
 class Game extends Component {
     constructor(props) {
@@ -36,7 +34,9 @@ class Game extends Component {
     }
 
       updatePlayerChoice = (playerChoice) => {
-        console.log(playerChoice)
+      const randomIndex = Math.floor(Math.random() * weaponsArray.length)
+      const randomComputerResult = weaponsArray[randomIndex]
+
       let gameFinal = this.state.gameResult
       let opponentScore = this.state.opponentScore
       let playerScore = this.state.playerScore
@@ -51,7 +51,7 @@ class Game extends Component {
         this.setState({playerScore: playerScore + 1})
       }
      this.setState({gameResult: gameFinal});
-     this.resetGame(5000)
+     this.resetGame(2000)
      }
   
     render() {
