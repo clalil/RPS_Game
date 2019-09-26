@@ -58,18 +58,18 @@ class Game extends Component {
         this.setState({playerScore: playerScore + 1})
       }
      this.setState({gameResult: gameFinal});
-     this.resetGame(2000)
+     this.resetGame(3000)
      }
   
     render() {
 
       return(
-        <div className=".container">
+        <div className="ui container segment">
           <GameInformation /> 
           <Player 
           onClick={this.updatePlayerChoice}
            />
-          <button 
+          <button className="ui inverted black button" 
             onClick={this.resetScoreBoard}>
             Reset scoreboard
           </button>

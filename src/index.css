@@ -1,11 +1,82 @@
+/* General styling */
+
 body {
-    background: blue;
+    background-image: url(https://images.pexels.com/photos/1249214/pexels-photo-1249214.jpeg?cs=srgb&dl=close-up-duel-fingers-1249214.jpg&fm=jpg);
+    background-size: cover;
+    font-size: 100%;
 }
 
-.golem-head,
-.scroll,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Game Component */
+.ui.container.segment {
+    margin: 3rem;
+    background:rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Header Component */
+.gameHeader {
+    color: rgb(32, 26, 26);
+    padding: 1.5rem;
+}
+
+/* Player Component */
+
+.rock,
+.paper,
 .scissors {
     max-width: 100%;
     height: 5em;
     cursor: pointer
+}
+
+.userChoice {
+    padding: 1rem;
+}
+
+.rock,
+.paper,
+.scissors {
+    border: 1px solid rgb(32, 26, 26);
+    border-radius: 50%;
+    padding: 0.2rem;
+    margin: 0.5rem;
+}
+
+/* Results displayed */
+
+.ui.center.aligned.segment {
+    background:rgba(0, 0, 0, 0.1);
+    color: rgb(237, 219, 219);
+    font-weight: 700;
+}
+
+/* Reset Game */
+.ui.inverted.black.button {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Keep footer in place */
+
+#main-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: #f5f5f5;
+    text-align: center;
 }
