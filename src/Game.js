@@ -44,10 +44,16 @@ class Game extends Component {
 
       if (playerChoice === randomComputerResult) {
         gameFinal = `Player chose ${playerChoice} and Computer chose ${randomComputerResult} - It's a draw!`
-      } else if ((playerChoice === weaponsArray[0] && randomComputerResult === weaponsArray[1]) || (playerChoice === weaponsArray[1] && randomComputerResult === weaponsArray[2]) || (playerChoice === weaponsArray[2] && randomComputerResult === weaponsArray[0])) {
+      } else if (
+        (playerChoice === weaponsArray[0] && randomComputerResult === weaponsArray[1])
+         || (playerChoice === weaponsArray[1] && randomComputerResult === weaponsArray[2]) 
+         || (playerChoice === weaponsArray[2] && randomComputerResult === weaponsArray[0])) {
         gameFinal = `Player chose ${playerChoice} and Computer chose ${randomComputerResult} - Computer won!`
         this.setState({opponentScore: opponentScore + 1})
-      } else if ((playerChoice === weaponsArray[0] && randomComputerResult === weaponsArray[2]) || (playerChoice === weaponsArray[1] && randomComputerResult === weaponsArray[0]) || (playerChoice === weaponsArray[2] && randomComputerResult === weaponsArray[1])) {
+      } else if (
+        (playerChoice === weaponsArray[0] && randomComputerResult === weaponsArray[2]) 
+        || (playerChoice === weaponsArray[1] && randomComputerResult === weaponsArray[0]) 
+        || (playerChoice === weaponsArray[2] && randomComputerResult === weaponsArray[1])) {
         gameFinal = `Player chose ${playerChoice} and Computer chose ${randomComputerResult} - You won!`
         this.setState({playerScore: playerScore + 1})
       }
