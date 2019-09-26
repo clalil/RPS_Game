@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Player from "./Player"
 import GameInformation from './GameInformation'
+import GameResultDisplayed from './GameResultDisplayed'
 
 
 const baseState = {
@@ -48,20 +49,21 @@ class Game extends Component {
   
     render() {
 
-      let whoWon = this.state.gameResult
-      let playerCurrentScore = this.state.playerScore
-      let opponentCurrentScore = this.state.opponentScore
-  
       return(
         <div className=".container">
           <GameInformation />
+          
           <Player 
           onClick={this.updatePlayerChoice}
            />
+
           <button onClick={this.resetGame}>Reset scoreboard</button>
-          {whoWon}
-          {playerCurrentScore}
-          {opponentCurrentScore}
+
+          <GameResultDisplayed 
+          whoDidWin={this.state.gameResult} 
+          playerCurrentScore={this.state.playerScore}
+          opponentCurrentScore={this.state.opponentScore}
+          />
         </div>
       )
     }
