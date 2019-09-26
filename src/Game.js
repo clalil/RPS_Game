@@ -27,6 +27,13 @@ class Game extends Component {
       );
     }
 
+    resetScoreBoard = () => {
+      this.setState({
+        opponentScore: 0,
+        playerScore: 0
+      })
+    }
+
       updatePlayerChoice = (playerChoice) => {
       const randomIndex = Math.floor(Math.random() * weaponsArray.length)
       const randomComputerResult = weaponsArray[randomIndex]
@@ -57,7 +64,7 @@ class Game extends Component {
           onClick={this.updatePlayerChoice}
            />
 
-          <button onClick={this.resetGame}>Reset scoreboard</button>
+          <button onClick={this.resetScoreBoard}>Reset scoreboard</button>
 
           <GameResultDisplayed 
           whoDidWin={this.state.gameResult} 
