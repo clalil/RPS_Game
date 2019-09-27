@@ -49,10 +49,11 @@ body {
 
 /* Results displayed */
 
-.ui.center.aligned.segment {
-    background:rgba(0, 0, 0, 0.1);
+.whoWonDiv {
     color: rgb(237, 219, 219);
     font-weight: 700;
+    font-size: 1.2rem;
+    padding: 2rem;
 }
 
 /* Reset Game */
