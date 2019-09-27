@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Player from "./Player"
-import GameInformation from './GameInformation'
 import GameResultDisplayed from './GameResultDisplayed'
 
 const baseState = {
@@ -64,8 +63,7 @@ class Game extends Component {
     render() {
 
       return(
-        <div className="ui container segment">
-          <GameInformation /> 
+        <div>
           <Player 
           onClick={this.updatePlayerChoice}
            />
