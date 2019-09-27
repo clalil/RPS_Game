@@ -49,11 +49,19 @@ body {
 
 /* Results displayed */
 
+.ui.raised.segments {
+   background: rgb(237, 219, 219);
+}
+
 .whoWonDiv {
-    color: rgb(237, 219, 219);
+    color: rgb(67, 59, 59);
     font-weight: 700;
     font-size: 1.2rem;
-    padding: 2rem;
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.scoreBoard {
+    margin-bottom: 2.5rem;
 }
 
 /* Reset Game */
