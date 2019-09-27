@@ -14,14 +14,18 @@ body {
 /* Game Component */
 .ui.container.segment {
     margin: 3rem;
-    background:rgba(0, 0, 0, 0.5);
+    background:rgba(0, 0, 0, 0.4);
     text-align: center;
 }
 
-/* Header Component */
+/* GameInformation Component */
 .gameHeader {
-    color: rgb(32, 26, 26);
+    color: rgb(243, 233, 233);
     padding: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Player Component */
@@ -35,13 +39,14 @@ body {
 }
 
 .userChoice {
-    padding: 1rem;
+    padding: 0 0 1rem 0;
 }
 
 .rock,
 .paper,
 .scissors {
-    border: 1px solid rgb(32, 26, 26);
+    background: rgb(237, 219, 219, 0.3);
+    border: 1.2px solid rgb(32, 26, 26);
     border-radius: 50%;
     padding: 0.2rem;
     margin: 0.5rem;
