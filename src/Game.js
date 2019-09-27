@@ -43,8 +43,6 @@ class Game extends Component {
 
       if (playerChoice === randomComputerResult) {
         gameFinal = `Player chose ${playerChoice} and Computer chose ${randomComputerResult} - It's a draw!`
-        this.setState({opponentScore: opponentScore + 0})
-        this.setState({playerScore: playerScore + 0})
       } else if (
         (playerChoice === weaponsArray[0] && randomComputerResult === weaponsArray[1])
          || (playerChoice === weaponsArray[1] && randomComputerResult === weaponsArray[2]) 
