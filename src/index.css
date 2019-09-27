@@ -20,7 +20,7 @@ body {
 
 /* GameInformation Component */
 .gameHeader {
-    color: rgb(243, 233, 233);
+    color: rgb(240, 230, 230);
     padding: 1.5rem;
 }
 
@@ -55,7 +55,7 @@ ul {
 /* Results displayed */
 
 .ui.raised.segments {
-   background: rgb(237, 219, 219);
+   background: rgb(208, 191, 191);
 }
 
 .whoWonDiv {
