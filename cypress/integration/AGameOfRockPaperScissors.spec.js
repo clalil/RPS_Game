@@ -5,7 +5,7 @@ describe('Cypress', () => {
     })
 })
 
-describe('The home page', () => {
+describe('When visiting the home page', () => {
 
     it('successfully loads the page content', () => {
         cy.visit('/')
@@ -21,10 +21,17 @@ describe('The home page', () => {
         .should('have.length', 3)
 
         cy
-        .get('.user_choice')
-        .should('contain', "Rock")
-        .should('contain', "Paper")
-        .should('contain', "Scissors")
+        .get('div[class="userChoice"]')
+        .find('img')
+        .should('be.visible')
+
+        cy
+        .get('button[class="ui inverted black button"]')
+        .should('be.visible')
+
+        cy
+        .get('div[class="scoreBoard"]')
+        .should('be.visible')
     })
 
     // describe('Playing the game', () => {
