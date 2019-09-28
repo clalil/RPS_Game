@@ -8,23 +8,23 @@ const GameResultDisplayed = (props) => {
                     </div>
 
                     <div className="scoreBoard">
-                            <div className="ui label" tabindex="0">
+                            <div className="ui label">
                             <div className="ui label">
                                 <i className="user icon"></i> 
                                 You
                             </div>
-                                <a className="ui basic label">
+                                <span className="ui basic label">
                                     <p>{props.playerCurrentScore}</p>
-                                </a>
+                                </span>
                             </div>
-                    <div className="ui label" tabindex="0">
+                    <div className="ui label">
                         <div className="ui label">
                             <i className="user secret icon"></i> 
                             Opponent
                         </div>
-                            <a className="ui basic label">
+                            <span className="ui basic label">
                                 <p>{props.opponentCurrentScore}</p>
-                            </a>
+                            </span>
                         </div>
                     </div>
             </div>
