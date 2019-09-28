@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { mount, shallow } from 'enzyme'
 import Player from './Player'
-import rock from './img/rock.png'
 
 describe('<Player />', () => {
 
@@ -11,5 +10,11 @@ describe('<Player />', () => {
         ReactDOM.render(<Player />, div);
         ReactDOM.unmountComponentAtNode(div);
     });
+
+    it('checks if the onClick method exists', () => {
+        
+    })
+
+
 
 });
