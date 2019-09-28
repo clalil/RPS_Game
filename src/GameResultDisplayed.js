@@ -2,7 +2,7 @@ import React from 'react'
 
 const GameResultDisplayed = (props) => {
         return (
-                <div className="ui raised segments">
+                <div className="ui raised segments" id="cyDivResult">
                     <div className="whoWonDiv">
                         <p style={{padding: "1rem"}}>{props.whoDidWin}</p>
                     </div>

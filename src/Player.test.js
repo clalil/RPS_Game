@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { mount, shallow } from 'enzyme'
 import Player from './Player'
+import { shallow } from 'enzyme'
 
 describe('<Player />', () => {
 
@@ -11,10 +11,10 @@ describe('<Player />', () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it('checks if the onClick method exists', () => {
-        
+    it('displays Player\'s choice', () => {
+        const component = shallow(<Player onClick={playerWeaponsArray}/>)
+        component.find("#rock").simulate("click")
+        expect(component.contains('You chose Rock')).toEqual(true);
     })
-
-
 
 });
