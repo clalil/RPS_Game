@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { mount } from 'enzyme'
 import App from '../App'
 
 describe('<App />', () => {
@@ -10,7 +9,5 @@ describe('<App />', () => {
         ReactDOM.render(<App />, div);
         ReactDOM.unmountComponentAtNode(div);
       });
-
-    
 
 })

@@ -1,4 +1,3 @@
-import { exportAllDeclaration } from "@babel/types"
 
 describe('Cypress', () => {
     it('should work', () => {
@@ -12,8 +11,17 @@ describe('The home page', () => {
         cy.visit('/')
         cy.get('h1')
         .should('contain', "Rock, Paper, Scissors")
+        .get('h3')
+        .should('contain', "Welcome, the rules are simple:")
 
-        cy.get('.user_choice')
+        cy
+        .get('ul')
+        .should('be.visible')
+        .get('li')
+        .should('have.length', 3)
+
+        cy
+        .get('.user_choice')
         .should('contain', "Rock")
         .should('contain', "Paper")
         .should('contain', "Scissors")
