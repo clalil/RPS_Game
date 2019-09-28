@@ -1,21 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
+import rock from './img/rock.png'
+import paper from './img/paper.png'
+import scissors from './img/scissors.png'
 
-class Player extends Component {
-  render() {
+const Player = (props) => {
+  const playerWeaponsArray = ["rock", "paper", "scissors"]
+
     return (
-      <div className="user_choice">
-        <button id="rock" onClick={e => this.props.onClick("rock")}>
-          Rock
-        </button>
-        <button id="paper" onClick={e => this.props.onClick("paper")}>
-          Paper
-        </button>
-        <button id="scissors" onClick={e => this.props.onClick("scissors")}>
-          Scissors
-        </button>
+      <div className="userChoice">
+        <img id="rock" className="rock" onClick={e => props.onClick(playerWeaponsArray[0])} src={rock} alt="Rock"/>
+        <img id="paper" className="paper" onClick={e => props.onClick(playerWeaponsArray[1])} src={paper} alt="Paper"/>
+        <img id="scissors" className="scissors" onClick={e => props.onClick(playerWeaponsArray[2])} src={scissors} alt="Scissors"/>
       </div>
     );
-  }
 }
-
 export default Player;

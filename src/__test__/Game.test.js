@@ -1,9 +1,8 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import App from '../App'
-import { exportAllDeclaration } from '@babel/types'
 
-describe('<App />', () => {
+describe('<Game />', () => {
 
     it('displays Player\'s choice', () => {
         const describedComponent = mount(<App />)
@@ -17,10 +16,10 @@ describe('<App />', () => {
         expect(describedComponent.contains('Computer chose')).toBeTruthy;
     })
 
-    it('should not do anything before a weapon has been selected', () => {
+    it('displays the Winner of the game', () => {
         const describedComponent = mount(<App />)
-        describedComponent.find('#startGame').simulate('click')
-        expect(describedComponent.find('.container').exists()).toEqual(false);
+        describedComponent.find('#rock').simulate("click")
+        expect(describedComponent.contains('won')).toBeTruthy;
     })
 
 })
