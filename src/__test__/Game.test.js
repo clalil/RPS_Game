@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Game from '../Game'
+import { shallow } from 'enzyme'
 
 describe('<Game />', () => {
 
@@ -27,5 +28,12 @@ describe('<Game />', () => {
         };
         expect(result).toEqual('Computer won!')
     });
+
+      it('resets the score board on click', () => {
+        const wrapper = shallow(<Game />);
+        wrapper.setState({ playerScore: 1 });
+        wrapper.find('#resetBtn').props().onClick();
+        expect(wrapper.state().playerScore).toEqual(0);
+      });
 
 })
