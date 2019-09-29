@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Player from './Player'
 import { shallow } from 'enzyme'
+import sinon from 'sinon'
 
 describe('<Player />', () => {
 
@@ -11,10 +12,11 @@ describe('<Player />', () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it('displays Player\'s choice', () => {
-        const component = shallow(<Player onClick={playerWeaponsArray}/>)
-        component.find("#rock").simulate("click")
-        expect(component.contains('You chose Rock')).toEqual(true);
-    })
+    // it('displays Player\'s choice', () => {
+    //     const onButtonClick = sinon.spy()
+    //     const component = shallow(<Player onClick={updatePlayerChoice}/>)
+    //     component.find("#rock").simulate("click")
+    //     expect(onButtonClick).to.have.property('rock');
+    // })
 
 });

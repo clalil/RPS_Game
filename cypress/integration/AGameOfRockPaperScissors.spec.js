@@ -62,14 +62,5 @@ describe('When visiting the home page', () => {
             .contains('You chose scissors')
         })
 
-        it('knows who won the game', () => {
-            cy
-            .get('.userChoice')
-            .find('#rock').as('rockBtn')
-            cy.get('@rockBtn').click()
-            cy.contains('You chose rock')
-            cy.contains('Computer chose')
-        })
-
     })
 })

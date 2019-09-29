@@ -14,7 +14,7 @@ const GameResultDisplayed = (props) => {
                                 You
                             </div>
                                 <span className="ui basic label">
-                                    <p>{props.playerCurrentScore}</p>
+                                    <p className="cyPlayerScore">{props.playerCurrentScore}</p>
                                 </span>
                             </div>
                     <div className="ui label">
@@ -23,7 +23,7 @@ const GameResultDisplayed = (props) => {
                             Opponent
                         </div>
                             <span className="ui basic label">
-                                <p>{props.opponentCurrentScore}</p>
+                                <p className="cyOpponentScore">{props.opponentCurrentScore}</p>
                             </span>
                         </div>
                     </div>

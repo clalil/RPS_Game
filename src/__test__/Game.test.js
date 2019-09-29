@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Game from '../Game'
 import { shallow } from 'enzyme'
+import sinon from 'sinon'
 
 describe('<Game />', () => {
 
@@ -11,11 +12,21 @@ describe('<Game />', () => {
         ReactDOM.unmountComponentAtNode(div);
       });
 
-    it('should have an initial state', () => {
-      const component = shallow(<Game />)
-      expect(component.state(gameResult)).toEqual(null);
-      expect(component.state(playerScore)).toEqual(0);
-      expect(component.state(opponentScore)).toEqual(0);
-    })
+    it('tests if the function logic of updatePlayerChoice works', () => {
+        let playerChoice = 'rock'
+        const randomComputerResult = 'rock'
+        let result = 'empty string'
+        if (playerChoice === randomComputerResult) {
+          result = `It's a draw!`
+        } else if (
+          (playerChoice === weaponsArray[0] && randomComputerResult === weaponsArray[1])
+           || (playerChoice === weaponsArray[1] && randomComputerResult === weaponsArray[2]) 
+           || (playerChoice === weaponsArray[2] && randomComputerResult === weaponsArray[0])) {
+          result = `Computer won!`
+        } else {
+          result = `You won!`
+        };
+        expect(result).toEqual('It\'s a draw!')
+    });
 
 })
