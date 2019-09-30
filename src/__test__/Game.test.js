@@ -9,7 +9,7 @@ describe('<Game />', () => {
         const div = document.createElement('div');
         ReactDOM.render(<Game />, div);
         ReactDOM.unmountComponentAtNode(div);
-      });
+    });
 
     it('tests if the function logic of updatePlayerChoice works', () => {
         const weaponsArray = ['rock', 'paper', 'scissors']
@@ -29,11 +29,13 @@ describe('<Game />', () => {
         expect(result).toEqual('Computer won!')
     });
 
-      it('resets the score board on click', () => {
-        const wrapper = shallow(<Game />);
-        wrapper.setState({ playerScore: 1 });
-        wrapper.find('#resetBtn').props().onClick();
-        expect(wrapper.state().playerScore).toEqual(0);
-      });
+    it('resets the score board on click', () => {
+        const component = shallow(<Game />);
+        component.setState({ playerScore: 1 });
+        component.setState({ opponentScore: 2 });
+        component.find('#resetBtn').props().onClick();
+        expect(component.state().playerScore).toEqual(0);
+        expect(component.state().opponentScore).toEqual(0);
+    });
 
 })
