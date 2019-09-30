@@ -1,10 +1,3 @@
-
-describe('Cypress', () => {
-    it('should work', () => {
-        expect(true).to.equal(true)
-    })
-})
-
 describe('When visiting the home page', () => {
 
     it('successfully loads the page content', () => {
@@ -36,7 +29,7 @@ describe('When visiting the home page', () => {
 
     describe('Playing the game', () => {
 
-        it('chooses a weapon and plays the game', () => {
+        it('displays the Player\'s choice', () => {
             cy
             .get('.userChoice')
             .find('#rock').as('rockBtn')
@@ -60,6 +53,16 @@ describe('When visiting the home page', () => {
             .get('@resultDiv')
             .wait(500)
             .contains('You chose scissors')
+        })
+
+        it('displays the winner', () => {
+            cy
+            .get('.userChoice')
+            .find('#scissors').as('scissorsBtn')
+            .get('@scissorsBtn').click()
+            .get('#cyDivResult').as('resultDiv')
+            .get('@resultDiv')
+            .should('contain', 'Computer chose')
         })
 
     })
