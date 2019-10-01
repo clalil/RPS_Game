@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Game from '../Game'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 describe('<Game />', () => {
 
@@ -30,7 +30,7 @@ describe('<Game />', () => {
     });
 
     it('resets the score board on click', () => {
-        const component = shallow(<Game />);
+        const component = mount(<Game />);
         component.setState({ playerScore: 1 });
         component.setState({ opponentScore: 2 });
         component.find('#resetBtn').props().onClick();
