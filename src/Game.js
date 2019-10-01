@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Player from "./Player"
+import ResetBtn from './ResetBtn'
 import GameResultDisplayed from './GameResultDisplayed'
 
 const weaponsArray = ['rock', 'paper', 'scissors']
@@ -61,10 +62,9 @@ class Game extends Component {
           <Player 
           onClick={this.updatePlayerChoice}
           />
-          <button className="ui inverted black button" id="resetBtn"
-            onClick={this.resetScoreBoard}>
-            Reset scoreboard
-          </button>
+          <ResetBtn
+          onClick={() => this.resetScoreBoard}
+          />
           <GameResultDisplayed 
           whoDidWin={this.state.gameResult} 
           playerCurrentScore={this.state.playerScore}
