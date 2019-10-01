@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Player from './Player'
-import { shallow } from 'enzyme'
-import sinon from 'sinon'
+import Player from '../Player'
 
 describe('<Player />', () => {
 

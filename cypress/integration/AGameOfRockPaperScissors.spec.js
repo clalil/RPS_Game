@@ -65,5 +65,15 @@ describe('When visiting the home page', () => {
             .should('contain', 'Computer chose')
         })
 
+        it('resets after a finished game', () => {
+            cy
+            .get('.userChoice')
+            .find('#scissors').as('scissorsBtn')
+            .get('@scissorsBtn').click()
+            .get('#cyDivResult').as('resultDiv')
+            .get('@resultDiv')
+            .should('contain', 'Computer chose')
+        })
+
     })
 })
