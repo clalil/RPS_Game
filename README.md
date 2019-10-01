@@ -4,18 +4,17 @@
 ## Built with  
 **Front End:** React v.16.9.0, CSS  
 **Back End:** N/a  
-**Testing frameworks:** Cypress, Jest, Enzyme 
+**Testing frameworks:** Cypress, Enzyme 
 ## About this repository  
-This repository contains my choices for the individual RPS Game challenge from the Craft Academy Boot Camp. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks, when I took on this challenge. 
+This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to accomplish this challenge by using React. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks, when I took on this challenge. 
 ## Getting started
 ### Dependencies  
-* Create React App  
-* Jest  
+* Create React App    
 * Enzyme
 * Cypress 
 * Sinon
 
-## 
+## How to use this application
 
 ### Acknowledgement  
 - Thank you [Craft Academy](https://craftacademy.se) for giving me this assignment.  
@@ -27,27 +26,18 @@ This repository contains my choices for the individual RPS Game challenge from t
 ## User Stories  
 ```
 As a User  
-When I visit the page  
-I want to see my game choices   
+In order to play the Rock, Paper, Scissors game    
+I want to be able to choose a weapon     
 
 As a User  
-In order to play the game    
-I want to be able to pick Paper, Rock or  Scissors 
+When I play the game    
+I want to play against a computer   
 
 As a User  
-When I play Paper, Rock, Scissors  
-I want to play against a computer  
+When I play against the computer   
+I want to know which one of us won the game  
 
 As a User  
-When I pick the same option as the computer  
-I want to see 'It's a draw'  
-
-As a User  
-When I pick a different option than the computer  
-I want to know which one of us has won the game  
-
-As a User  
-In order to know how many times I've beaten the computer  
+In order to fully enjoy this game    
 I wish to keep track of my wins and losses  
-
 ```
