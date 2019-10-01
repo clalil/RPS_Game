@@ -1,11 +1,25 @@
-# Rock, Paper, Scissors  
-## Dependencies  
+# Rock, Paper, Scissors 
+### Author  
+[Clarissa Liljander](https://github.com/clalil) 
+## Built with  
+**Front End:** React v.16.9.0, CSS  
+**Back End:** N/a  
+**Testing frameworks:** Cypress, Jest, Enzyme 
+## About this repository  
+This repository contains my choices for the individual RPS Game challenge from the Craft Academy Boot Camp. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks, when I took on this challenge. 
+## Getting started
+### Dependencies  
 * Create React App  
 * Jest  
-* Cypress  
+* Enzyme
+* Cypress 
 
+## 
 
 ### Acknowledgement  
+- Thank you [Craft Academy](https://craftacademy.se) for giving me this assignment.  
+- The images for my rock, paper and scissor icons are from [Game-icons.net](https://game-icons.net).
+- The background image is from [Pexels](https://www.pexels.com).
 - The tests written and passed in the development branch are from [Learn TDD in React](https://learntdd.in/react/), which I used to become accustomed with using Jest and Cypress. 
 
 ## User Stories  
