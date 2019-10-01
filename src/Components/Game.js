@@ -6,14 +6,6 @@ import GameResultDisplayed from "./GameResultDisplayed";
 const weaponsArray = ["rock", "paper", "scissors"];
 
 class Game extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     gameResult: null,
-  //     opponentScore: 0,
-  //     playerScore: 0
-  //   }
-  // }
 
   state = {
     gameResult: null,
@@ -21,10 +13,9 @@ class Game extends Component {
     playerScore: 0
   };
 
-  updatePlayerChoice = playerChoice => {
+  playTheGame = playerChoice => {
     const randomIndex = Math.floor(Math.random() * weaponsArray.length);
     const randomComputerChoice = weaponsArray[randomIndex];
-    // console.log(randomCompterChoice)
   
     let gameFinal = this.state.gameResult;
     let opponentScore = this.state.opponentScore;
@@ -70,7 +61,7 @@ class Game extends Component {
   render() {
     return (
       <div>
-        <Player onClick={this.updatePlayerChoice} />
+        <Player onClick={this.playTheGame} />
         <ResetBtn onClick={() => this.resetScoreBoard} />
         <GameResultDisplayed
           whoDidWin={this.state.gameResult}

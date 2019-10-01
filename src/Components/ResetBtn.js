@@ -5,7 +5,7 @@ const ResetBtn = props => {
     <div>
       <button
         className="ui inverted black button"
-        id="resetBtn"
+        id="reset-btn"
         onClick={props.onClick()}
       >
         Reset scoreboard
