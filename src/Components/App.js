@@ -11,9 +11,7 @@ class App extends Component {
           <GameInformation />
           <Game />
         </div>
-        <div>
           <Footer />
-        </div>
       </>
     );
   }
