@@ -1,33 +1,63 @@
-# Rock, Paper, Scissors  
-## Dependencies  
-* Create React App  
-* Jest  
-* Cypress  
+# Rock, Paper, Scissors 
+### Author  
+[Clarissa Liljander](https://github.com/clalil) 
+## Built with  
+**Front End:** React v.16.9.0, CSS  
+**Back End:** N/a  
+**Testing frameworks:** Cypress, Enzyme 
+## The code   
+This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to accomplish this challenge by using React. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks.   
+## Getting started
+### Dependencies  
+* Create React App    
+* Enzyme
+* Cypress 
+* Sinon
 
+### Setup   
+To test this application you need to fork it to your own GitHub account and clone it to your local workspace.  
+
+To run the unit tests:  
+```
+$ yarn test
+```  
+To start cypress and run the feature tests:  
+```
+$ yarn cypress:open
+```
+To start the application:
+```
+$ yarn start
+```
+
+## Updates/Improvements  
+When time given, I plan to separate my business logic from the Game component.  
+
+## License  
+This project is under the [MIT-license](https://en.wikipedia.org/wiki/MIT_License).
 
 ### Acknowledgement  
+- Thank you [Craft Academy](https://craftacademy.se) for giving me this assignment.  
+- The images for my rock, paper and scissor icons are from [Game-icons.net](https://game-icons.net).
+- The background image is from [Pexels](https://www.pexels.com).
+- The concept of to properly stub a random game functionality can be found at [Stack Owerflow](https://stackoverflow.com/questions/10515000/how-to-test-with-math-random-in-javascript/10516416).
 - The tests written and passed in the development branch are from [Learn TDD in React](https://learntdd.in/react/), which I used to become accustomed with using Jest and Cypress. 
 
 ## User Stories  
 ```
 As a User  
-When I visit the page  
-I want to see my game choices   
+In order to play the Rock, Paper, Scissors game    
+I want to be able to choose a weapon     
 
 As a User  
-In order to play the game    
-I want to be able to pick Paper, Rock or  Scissors 
+When I play the game    
+I want to play against a computer   
 
 As a User  
-When I play Paper, Rock, Scissors  
-I want to play against a computer  
+When I play against the computer   
+I want to know which one of us won the game  
 
 As a User  
-When I pick the same option as the computer  
-I want to see 'It's a draw'  
-
-As a User  
-When I pick a different option than the computer  
-I want to know which one of us has won the game  
-
+In order to fully enjoy this game    
+I wish to keep track of my wins and losses  
 ```
