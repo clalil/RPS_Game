@@ -19,7 +19,7 @@ body {
 }
 
 /* GameInformation Component */
-.gameHeader {
+.game-header {
     color: rgb(240, 230, 230);
     padding: 1.5rem;
 }
