@@ -18,7 +18,24 @@ describe('<Game />', () => {
       sinon.stub(Math, 'random').returns(0.66)
       const describedComponent = mount(<Game />);
       describedComponent.find('#rock-btn').simulate('click')
-      expect(describedComponent.state().gameResult).toEqual('You chose rock and Computer chose paper - Computer won!')
+      expect(describedComponent.state().gameResult).toEqual('You chose rock and Computer chose paper - Computer wins!')
+      sinon.restore();
+  });
+
+  it('tests the main game functionality using a stub', () => {
+    sinon.stub(Math, 'random').returns(0.33)
+    const describedComponent = mount(<Game />);
+    describedComponent.find('#rock-btn').simulate('click')
+    expect(describedComponent.state().gameResult).toEqual("You chose rock and Computer chose rock - It\'s a tie!")
+    sinon.restore();
+  });
+
+  it('tests the main game functionality using a stub', () => {
+    sinon.stub(Math, 'random').returns(0.99)
+    const describedComponent = mount(<Game />);
+    describedComponent.find('#rock-btn').simulate('click')
+    expect(describedComponent.state().gameResult).toEqual("You chose rock and Computer chose scissors - You win!")
+    sinon.restore();
   });
 
 })

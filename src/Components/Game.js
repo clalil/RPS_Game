@@ -29,10 +29,10 @@ class Game extends Component {
       (playerChoice === weaponsArray[2] &&
         randomComputerChoice === weaponsArray[0])
     ) {
-      gameFinal = `You chose ${playerChoice} and Computer chose ${randomComputerChoice} - Computer won!`;
+      gameFinal = `You chose ${playerChoice} and Computer chose ${randomComputerChoice} - Computer wins!`;
       this.setState({ opponentScore: opponentScore + 1 });
     } else {
-      gameFinal = `You chose ${playerChoice} and Computer chose ${randomComputerChoice} - You won!`;
+      gameFinal = `You chose ${playerChoice} and Computer chose ${randomComputerChoice} - You win!`;
       this.setState({ playerScore: playerScore + 1 });
     }
     this.setState({ gameResult: gameFinal });
