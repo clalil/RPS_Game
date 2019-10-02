@@ -14,7 +14,7 @@ describe('<Game />', () => {
     expect(describedComponent.state().opponentScore).toEqual(0);
   });
 
-  it('tests the main game functionality using a stub', () => {
+  it('shows computer as the winner if scissors beats rock', () => {
       sinon.stub(Math, 'random').returns(0.66)
       const describedComponent = mount(<Game />);
       describedComponent.find('#rock-btn').simulate('click')
@@ -22,7 +22,7 @@ describe('<Game />', () => {
       sinon.restore();
   });
 
-  it('tests the main game functionality using a stub', () => {
+  it('shows a tied result if both player and computer choose rock', () => {
     sinon.stub(Math, 'random').returns(0.33)
     const describedComponent = mount(<Game />);
     describedComponent.find('#rock-btn').simulate('click')
@@ -30,7 +30,7 @@ describe('<Game />', () => {
     sinon.restore();
   });
 
-  it('tests the main game functionality using a stub', () => {
+  it('shows player as the winner if rock beats scissors', () => {
     sinon.stub(Math, 'random').returns(0.99)
     const describedComponent = mount(<Game />);
     describedComponent.find('#rock-btn').simulate('click')
