@@ -31,25 +31,22 @@ describe('Playing the game', () => {
 
   it('displays the Player\'s choice', () => {
     cy
-    .get('.userChoice')
-    .find('#rock').as('rockBtn')
-    .get('@rockBtn').click()
+    .get('#rock-btn')
+    .click()
     .get('.who-won-div').as('resultDiv')
     .get('@resultDiv')
     .contains('You chose rock')
 
     cy
-    .get('.userChoice')
-    .find('#paper').as('paperBtn')
-    .get('@paperBtn').click()
+    .get('#paper-btn')
+    .click()
     .get('@resultDiv')
     .wait(500)
     .contains('You chose paper')
 
     cy
-    .get('.userChoice')
-    .find('#scissors').as('scissorsBtn')
-    .get('@scissorsBtn').click()
+    .get('#scissors-btn')
+    .click()
     .get('@resultDiv')
     .wait(500)
     .contains('You chose scissors')
@@ -57,9 +54,8 @@ describe('Playing the game', () => {
 
   it('displays the winner', () => {
     cy
-    .get('.userChoice')
-    .find('#scissors').as('scissorsBtn')
-    .get('@scissorsBtn').click()
+    .get('#scissors-btn')
+    .click()
     .get('.who-won-div').as('resultDiv')
     .get('@resultDiv')
     .should('contain', 'Computer chose')
@@ -67,9 +63,8 @@ describe('Playing the game', () => {
 
   it('resets after a finished game', () => {
     cy
-    .get('.userChoice')
-    .find('#scissors').as('scissorsBtn')
-    .get('@scissorsBtn').click()
+    .get('#scissors-btn')
+    .click()
     .get('.who-won-div').as('resultDiv')
     .get('@resultDiv')
     .should(($resultDiv) => {
