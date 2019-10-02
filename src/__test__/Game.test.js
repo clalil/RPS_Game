@@ -17,7 +17,7 @@ describe('<Game />', () => {
   it('tests the main game functionality using a stub', () => {
       sinon.stub(Math, 'random').returns(0.66)
       const describedComponent = mount(<Game />);
-      describedComponent.find('#rock').simulate('click')
+      describedComponent.find('#rock-btn').simulate('click')
       expect(describedComponent.state().gameResult).toEqual('You chose rock and Computer chose paper - Computer won!')
   });
 
