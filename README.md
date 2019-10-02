@@ -14,7 +14,7 @@ This repository contains my individual RPS Game challenge from the Craft Academy
 * Cypress 
 * Sinon
 
-## How to use this application
+## How to use this application[WIP]
 
 ### Acknowledgement  
 - Thank you [Craft Academy](https://craftacademy.se) for giving me this assignment.  
