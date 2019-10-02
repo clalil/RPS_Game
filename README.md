@@ -5,8 +5,8 @@
 **Front End:** React v.16.9.0, CSS  
 **Back End:** N/a  
 **Testing frameworks:** Cypress, Enzyme 
-## About this repository  
-This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to accomplish this challenge by using React. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks, when I took on this challenge. 
+## The code   
+This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to accomplish this challenge by using React. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks.   
 ## Getting started
 ### Dependencies  
 * Create React App    
@@ -14,7 +14,27 @@ This repository contains my individual RPS Game challenge from the Craft Academy
 * Cypress 
 * Sinon
 
-## How to use this application[WIP]
+### Setup   
+To test this application you need to fork it to your own GitHub account and clone it to your local workspace.  
+
+To run the unit tests:  
+```
+$ yarn test
+```  
+To start cypress and run the feature tests:  
+```
+$ yarn cypress:open
+```
+To start the application:
+```
+$ yarn start
+```
+
+## Updates/Improvements  
+When time given, I plan to separate my business logic from the Game component.  
+
+## License  
+This project is under the [MIT-license](https://en.wikipedia.org/wiki/MIT_License).
 
 ### Acknowledgement  
 - Thank you [Craft Academy](https://craftacademy.se) for giving me this assignment.  
