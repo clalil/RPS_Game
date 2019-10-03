@@ -13,8 +13,8 @@ describe('<Game />', () => {
   })
 
   it('resets the score board on click', () => {
-    describedComponent.setState({ playerScore: 1 });
-    describedComponent.setState({ opponentScore: 2 });
+    describedComponent.setState(prevState => ({ playerScore: prevState.playerScore + 1 }));
+    describedComponent.setState(prevState => ({ opponentScore: prevState.opponentScore + 1 }));
     describedComponent.find('#reset-btn').simulate('click');
     expect(describedComponent.state().playerScore).toEqual(0);
     expect(describedComponent.state().opponentScore).toEqual(0);
