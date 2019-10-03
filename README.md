@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rock, Paper, Scissors 
+### Author  
+[Clarissa Liljander](https://github.com/clalil) 
+## Built with  
+**Front End:** React v.16.9.0, CSS  
+**Back End:** N/a  
+**Testing frameworks:** Cypress, Enzyme  
 
-## Available Scripts
+![](./src/img/readme.png)
 
-In the project directory, you can run:
+## The code   
+This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to take on this challenge using React. I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks or sinon.   
+## Getting started
+### Dependencies  
+* Create React App    
+* Enzyme
+* Cypress 
+* Sinon
 
-### `npm start`
+### Setup   
+To test this application you need to fork it to your own GitHub account and clone it to your local workspace.  
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run the unit tests:  
+```
+$ yarn test
+```  
+To start cypress and run the feature tests:  
+```
+$ yarn cypress:open
+```
+To start the application:
+```
+$ yarn start
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Game rules
+When you run the app, you will be presented with the rules of the game. Click on the appropriate icon to pick your choice of weapon and the game will automatically return the computer's choice and declare a winner. The results are timed and will disappear within four seconds.
 
-### `npm test`
+The scoreboard is reset manually by clicking the __reset button__.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Updates/Improvements  
+When time given, I plan to separate my business logic from the Game component.  
 
-### `npm run build`
+## License  
+This project is under the [MIT-license](https://en.wikipedia.org/wiki/MIT_License).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Acknowledgement  
+- Thank you [Craft Academy](https://craftacademy.se) for giving me this assignment.  
+- The images for my rock, paper and scissor icons are from [Game-icons.net](https://game-icons.net).
+- The background image is from [Pexels](https://www.pexels.com).
+- The concept of to properly stub a random game functionality can be found at [Stack Owerflow](https://stackoverflow.com/questions/10515000/how-to-test-with-math-random-in-javascript/10516416).
+- The tests written and passed in the development branch are from [Learn TDD in React](https://learntdd.in/react/), which I used to become accustomed with using Jest and Cypress. 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## User Stories  
+```
+As a User  
+In order to play the Rock, Paper, Scissors game    
+I want to be able to choose a weapon     
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As a User  
+When I play the game    
+I want to play against a computer   
 
-### `npm run eject`
+As a User  
+When I play against the computer   
+I want to know which one of us won the game  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+As a User  
+In order to fully enjoy this game    
+I wish to keep track of my wins and losses  
+```
