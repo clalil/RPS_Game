@@ -1,7 +1,7 @@
 /* General styling */
 
 body {
-    background-image: url(https://images.pexels.com/photos/1249214/pexels-photo-1249214.jpeg?cs=srgb&dl=close-up-duel-fingers-1249214.jpg&fm=jpg);
+    background-image: url('./img/background_rps.jpg');
     background-size: cover;
     font-size: 100%;
 }

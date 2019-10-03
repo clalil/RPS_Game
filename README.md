@@ -4,9 +4,12 @@
 ## Built with  
 **Front End:** React v.16.9.0, CSS  
 **Back End:** N/a  
-**Testing frameworks:** Cypress, Enzyme 
+**Testing frameworks:** Cypress, Enzyme  
+
+![](./src/img/readme.png)
+
 ## The code   
-This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to accomplish this challenge by using React. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks.   
+This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to accomplish this challenge by using React. Please remember that I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks or sinon.   
 ## Getting started
 ### Dependencies  
 * Create React App    
