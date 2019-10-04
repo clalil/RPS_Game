@@ -2,9 +2,11 @@
 ### Author  
 [Clarissa Liljander](https://github.com/clalil) 
 ## Built with  
-**Front End:** React v.16.9.0, CSS  
+**Front End:** React v.16.9.0, Semantic UI, CSS  
 **Back End:** N/a  
 **Testing frameworks:** Cypress, Enzyme  
+**Deployed at: [Netlify](https://clalil-rps.netlify.com/)**
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eeb43385-027e-47ef-95a5-f9645a6d1f36/deploy-status)](https://app.netlify.com/sites/clalil-rps/deploys)
 
 ![](./src/img/readme.png)
 
@@ -28,7 +30,7 @@ To start cypress and run the feature tests:
 ```
 $ yarn cypress:open
 ```
-To start the application:
+To start the application and run it on your local host:
 ```
 $ yarn start
 ```
