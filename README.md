@@ -9,7 +9,7 @@
 ![](./src/img/readme.png)
 
 ## The code   
-This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. I chose to take on this challenge using React. I had very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks or sinon.   
+This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. We were allowed to choose for ourselves which testing frameworks and libraries to use during this challenge and received no coach support. I chose to take on this challenge with very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks or sinon.   
 ## Getting started
 ### Dependencies  
 * Create React App    
@@ -46,10 +46,10 @@ This project is under the [MIT-license](https://en.wikipedia.org/wiki/MIT_Licens
 
 ### Acknowledgement  
 - Thank you [Craft Academy](https://craftacademy.se) for giving me this assignment.  
-- The images for my rock, paper and scissor icons are from [Game-icons.net](https://game-icons.net).
+- The icons are from [Game-icons.net](https://game-icons.net).
 - The background image is from [Pexels](https://www.pexels.com).
-- The concept of to properly stub a random game functionality can be found at [Stack Owerflow](https://stackoverflow.com/questions/10515000/how-to-test-with-math-random-in-javascript/10516416).
-- The tests written and passed in the development branch are from [Learn TDD in React](https://learntdd.in/react/), which I used to become accustomed with using Jest and Cypress. 
+- How to stub a random game functionality was found at [Stack Owerflow](https://stackoverflow.com/questions/10515000/how-to-test-with-math-random-in-javascript/10516416).
+- The tests using Jest, in the first commits of the development branch, are from [Learn TDD in React](https://learntdd.in/react/). The only purpose of these was to learn how to test components in React before moving forward with my own app. 
 
 ## User Stories  
 ```
