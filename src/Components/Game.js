@@ -14,10 +14,7 @@ class Game extends Component {
   playTheGame = playerChoice => {
     const weaponsArray = ["rock", "paper", "scissors"];
     const randomComputerChoice = weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
-
     let gameFinal = this.state.gameResult;
-    let opponentScore = this.state.opponentScore;
-    let playerScore = this.state.playerScore;
 
     if (playerChoice === randomComputerChoice) {
       gameFinal = `You chose ${playerChoice} and Computer chose ${randomComputerChoice} - It's a tie!`;
