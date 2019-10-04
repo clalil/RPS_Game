@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import GameInformation from "./GameInformation";
-import Footer from "./Footer";
-import Game from "./Game";
+import GameInformation from "./Components/GameInformation";
+import Footer from "./Components/Footer";
+import Game from "./Components/Game";
 
 class App extends Component {
   render() {
