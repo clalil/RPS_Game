@@ -41,14 +41,14 @@ describe('When visiting the home page', () => {
       .get('#paper-btn')
       .click()
       .get('@resultDiv')
-      .wait(500)
+      .wait(300)
       .contains('You chose paper')
 
       cy
       .get('#scissors-btn')
       .click()
       .get('@resultDiv')
-      .wait(500)
+      .wait(300)
       .contains('You chose scissors')
     })
 

@@ -33,7 +33,7 @@ class Game extends Component {
       this.setState(prevState => ({ playerScore: prevState.playerScore + 1 }));
     }
     this.setState({ gameResult: gameFinal });
-    this.resetGame(4000);
+    this.resetGame(2500);
   };
 
   resetGame = ms => {
