@@ -41,7 +41,7 @@ When you run the app, you will be presented with the rules of the game. Click on
 The scoreboard is reset manually by clicking the __reset button__.
 
 ## Updates/Improvements  
-When time given, I plan to separate my business logic from the Game component.  
+When time given, I plan to refactor my code.  
 
 ## License  
 This project is under the [MIT-license](https://en.wikipedia.org/wiki/MIT_License).
