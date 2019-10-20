@@ -14,21 +14,26 @@
 This repository contains my individual RPS Game challenge from the Craft Academy Boot Camp. We were allowed to choose for ourselves which testing frameworks and libraries to use during this challenge and received no coach support. I chose to take on this challenge with very little previous knowledge of React before creating this app, as well as no previous experience of the testing frameworks or sinon.   
 ## Getting started
 ### Dependencies  
-* Create React App    
+* React   
 * Enzyme
 * Cypress 
 * Sinon
+* Yarn
 
 ### Setup   
 To test this application you need to fork it to your own GitHub account and clone it to your local workspace.  
 
+To install all of the dependencies:  
+```
+$ yarn install
+```  
 To run the unit tests:  
 ```
 $ yarn test
 ```  
 To start cypress and run the feature tests:  
 ```
-$ yarn cypress:open
+$ yarn run cypress:open
 ```
 To start the application and run it on your local host:
 ```
